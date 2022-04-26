@@ -19,6 +19,8 @@ You should have received a copy of the GNU General Public License
 along with this program; see the file COPYING3.  If not see
 <http://www.gnu.org/licenses/>.  */
 
+#pragma GCC diagnostic ignored "-Wmaybe-uninitialized"
+
 #include "config.h"
 #include "system.h"
 #include "cpplib.h"

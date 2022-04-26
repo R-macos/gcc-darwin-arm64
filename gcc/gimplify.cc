@@ -13652,7 +13652,7 @@ gimplify_omp_loop (tree *expr_p, gimple_seq *pre_p)
 
   TREE_SET_CODE (for_stmt, OMP_SIMD);
 
-  int last;
+  int last = 0;
   switch (kind)
     {
     case OMP_CLAUSE_BIND_THREAD: last = 0; break;
