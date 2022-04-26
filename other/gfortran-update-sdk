@@ -1,0 +1,12 @@
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  SDK=`xcrun --show-sdk-path`
+else
+  SDK="$1"
+fi
+
+echo "Updating gfortran SDK path to $SDK"
+
+ln -sfn "$SDK" /opt/R/arm64/gfortran/SDK || ( echo "ERROR: cannot update the symlink! Try sudo ..." >&2; exit 1)
+
